@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  compalex:
+    image: dlevsha/compalex
+    container_name: compalex
+    environment:
+      - DATABASE_DRIVER=mysql
+      - DATABASE_ENCODING=utf8
+      - SAMPLE_DATA_LENGTH=100
+      - DATABASE_HOST=
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=
+      - DATABASE_USER=
+      - DATABASE_PASSWORD=
+      - DATABASE_DESCRIPTION=Developer database
+      -
+      - DATABASE_HOST_SECONDARY=
+      - DATABASE_PORT_SECONDARY=3306
+      - DATABASE_NAME_SECONDARY=
+      - DATABASE_USER_SECONDARY=
+      - DATABASE_PASSWORD_SECONDARY=
+      - DATABASE_DESCRIPTION_SECONDARY=Beta database
+    ports:
+      - "8000:8000"
